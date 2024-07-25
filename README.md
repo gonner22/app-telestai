@@ -1,8 +1,8 @@
-# Ledger Bitcoin Clone Boilerplate Application
+# Ledger AI Power Grid Application
 
 Boilerplate application for bitcoin clones.
 
-This application should be forked to create Bitcoin clone application for Ledger device such as Nano S, NanoX, NanoS+, Ledger Stax or Ledger Flex.
+This application should be forked to create AIPG clone application for Ledger device such as Nano S, NanoX, NanoS+, Ledger Stax or Ledger Flex.
 
 The original beta specification can be found at https://ledgerhq.github.io/btchip-doc/bitcoin-technical-beta.html - with the regular set of APDUs for standard wallet operations enabled.
 
@@ -10,7 +10,7 @@ The original beta specification can be found at https://ledgerhq.github.io/btchi
 > **Warning**
 > This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 >
-> `git clone git@github.com:ledgerHQ/app-bitcoin-clone-boilerplate  --recurse-submodules`
+> `git clone git@github.com:gonner22/app-bitcoin-clone-boilerplate  --recurse-submodules`
 
 This application adheres with Ledger latest application guidelines. 
 
