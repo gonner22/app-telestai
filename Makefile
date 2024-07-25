@@ -30,7 +30,7 @@ APPCOPYRIGHT="(c) 2024 Ledger"
 
 APPNAME ="Bitcoin clone boilerplate"
 
-VARIANT_VALUES = bitcoin_clone_boilerplate
+VARIANT_VALUES = aipg
 
 # Application source files
 # There is no additional sources for bitcoin
@@ -38,13 +38,13 @@ VARIANT_VALUES = bitcoin_clone_boilerplate
 
 # simplify for tests
 ifndef COIN
-COIN=bitcoin_clone_boilerplate
+COIN=aipg
 endif
 
 # Enabling DEBUG flag will enable PRINTF and disable optimizations
 #DEBUG = 1
 
-ifeq ($(COIN),bitcoin_clone_boilerplate)
+ifeq ($(COIN),aipg)
 	
 # Refer to : https://github.com/dan-da/coinparams/blob/master/coinprefixes.md
 BIP44_COIN_TYPE=1
