@@ -28,8 +28,6 @@ APPVERSION_P = 3
 APPDEVELOPPER="Ledger"
 APPCOPYRIGHT="(c) 2024 Ledger"
 
-APPNAME ="Bitcoin clone boilerplate"
-
 VARIANT_VALUES = aipg
 
 # Application source files
@@ -45,34 +43,17 @@ endif
 #DEBUG = 1
 
 ifeq ($(COIN),aipg)
-	
-# Refer to : https://github.com/dan-da/coinparams/blob/master/coinprefixes.md
-BIP44_COIN_TYPE=1
-BIP44_COIN_TYPE_2=1
-COIN_P2PKH_VERSION=111
-COIN_P2SH_VERSION=196
-COIN_NATIVE_SEGWIT_PREFIX=\"tb\" 
-
-# Name of the coin that will be used in the app display
-COIN_COINID_NAME="Bitcoin Clone BP"
-
-# Ticker that will be used in the transaction display
-COIN_COINID_SHORT=\"BP\" 
-
-# Sign message magic header
-COIN_COINID=\"Bitcoin\"
-
-# COIN_FAMILY can be set to FAMILY_BITCOIN, FAMILY_PEERCOIN, or FAMILY_STEALTH to handle 
-# parsing of the timestamp in the transaction (see lib-app-bitcoin/transaction.c)
-COIN_FAMILY=FAMILY_BITCOIN
-
-# COIN_FLAGS can be set to FLAG_PEERCOIN_UNITS, FLAG_PEERCOIN_SUPPORT, or
-# FLAG_SEGWIT_CHANGE_SUPPORT, (see lib-app-bitcoin/transaction.c and
-# lib-app-bitcoin/hash_input_finalize_full.c)
-COIN_FLAGS=FLAG_SEGWIT_CHANGE_SUPPORT
-
-# COIN_FORKID can be set if needed
-COIN_FORKID=0
+# AI Power Grid
+BIP44_COIN_TYPE=2886  
+BIP44_COIN_TYPE_2=2886 
+COIN_P2PKH_VERSION=23
+COIN_P2SH_VERSION=23 
+COIN_FAMILY=1 
+COIN_COINID=\"AI Power Grid\" 
+COIN_COINID_NAME="AI Power Grid"
+COIN_COINID_SHORT=\"AIPG\" 
+COIN_KIND=COIN_KIND_AIPG
+APPNAME ="AI Power Grid"	
 
 else ifeq ($(filter clean,$(MAKECMDGOALS)),)
 $(error Unsupported COIN - use $(VARIANT_VALUES))
