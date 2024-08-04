@@ -47,8 +47,28 @@ while true; do
         read -r response
         case $response in
             Yes|yes|YES|y|Y)
-                make load
-                exit 0
+                echo "Which operating system is the host running?"
+                echo "1) Linux"
+                echo "2) Windows"
+                echo "3) macOS"
+                read -r os_option
+                case $os_option in
+                    1)
+                        make load
+                        exit 0
+                        ;;
+                    2)
+                        make
+                        exit 0
+                        ;;
+                    3)
+                        make
+                        exit 0
+                        ;;
+                    *)
+                        echo "Invalid option. Please select '1', '2', or '3'."
+                        ;;
+                esac
                 ;;
             No|no|NO|n|N)
                 break
