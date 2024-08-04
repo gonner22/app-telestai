@@ -9,7 +9,13 @@ Ledger devices such as Nano S, NanoS+, Ledger Stax or Ledger Flex are supported.
 
 **Please note that the Ledger Nano X does not currently support sideloading, so it is not compatible with this application.**
 
-## How to use
+## Quick access links:
+- [Linux Installation Instructions](#linux-installation-instructions)
+- [Windows Installation Instructions](#windows-installation-instructions)
+- [macOS Installation Instructions](#macos-installation-instructions)
+
+
+## Linux Installation Instructions
 
 #### Pre-requisites
 - Install and configure
@@ -37,6 +43,11 @@ docker run --rm -ti  -v "$(realpath .):/app" --privileged -v "/dev/bus/usb:/dev/
 
 If everything was successful and no errors appeared on your computer screen, a new app called "AI Power Grid" will appear in the main menu of your device.
 
+## Windows Installation Instructions
+Soon!
+
+## macOS Installation Instructions
+Soon!
 
 This application adheres with Ledger latest application guidelines. 
 
