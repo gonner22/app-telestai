@@ -33,7 +33,10 @@ git clone https://github.com/gonner22/app-bitcoin-clone-boilerplate --recurse-su
 ```bash
 cd app-bitcoin-clone-boilerplate
 ```
-3. To install the app, run the following command to download the image and transfer the app to your Ledger device. Please note that all Ledger devices are compatible except for the Nano X due to inherent compatibility issues..
+3. To install the app, first connect your device to your computer. Then, run the following command to download the image and transfer it to your Ledger device.
+
+**Please note that all Ledger devices are compatible except for the Nano X, which is not currently supported due to technical limitations of Ledger.**
+
 ```bash
 docker run --rm -ti  -v "$(realpath .):/app" --privileged -v "/dev/bus/usb:/dev/bus/usb" --user root ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
