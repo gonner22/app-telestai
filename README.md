@@ -54,6 +54,7 @@ If everything was successful and no errors appeared on your computer screen, a n
 - Install and configure
   - :information_source: Docker: https://docs.docker.com/engine/install.
   - :information_source: It is assumed you have [Python](https://www.python.org/downloads/) installed on your computer.
+  - :information_source: Go to the official Git download page: https://git-scm.com/downloads
 
 > **Warning**
 > - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
