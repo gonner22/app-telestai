@@ -21,6 +21,7 @@ Ledger devices such as Nano S, NanoS+, Ledger Stax or Ledger Flex are supported.
 - Install and configure
   - :information_source: Docker: https://docs.docker.com/engine/install. Note: user must be able to run Docker without `sudo` (https://docs.docker.com/engine/install/linux-postinstall/)
   - :information_source: It is assumed you have [Python](https://www.python.org/downloads/) installed on your computer.
+  - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
 > - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
@@ -34,16 +35,37 @@ git clone https://github.com/gonner22/app-bitcoin-clone-boilerplate --recurse-su
 ```bash
 cd app-bitcoin-clone-boilerplate
 ```
-3. To install the app, first connect your device to your computer. Then, run the following command to download the image and transfer it to your Ledger device.
+3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
 
-**Please note that all Ledger devices are compatible except for the Nano X, which is not currently supported due to technical limitations of Ledger.**
+   **Please note that all Ledger devices are compatible except for the Nano X, which is not currently supported due to technical limitations of Ledger.**
 
 ```bash
 docker run --rm -ti  -v "$(realpath .):/app" --privileged -v "/dev/bus/usb:/dev/bus/usb" --user root ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
-4. The user will see a menu to select their device and confirm it is connected, unlocked, and not currently running any applications..
+4.You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
 
-5. The user should review their device screen and confirm when prompted.
+- Nano S
+```bash
+BOLOS_SDK=$NANOS_SDK
+```
+- NANO S+
+```bash
+BOLOS_SDK=$NANOSP_SDK
+```
+- NANO Flax
+```bash
+BOLOS_SDK=$FLAX_SDK
+```
+- NANO Stax
+```bash
+BOLOS_SDK=$STAX_SDK
+```
+5. To compile and load the app, run the following command within the container:
+
+```bash
+make load
+```
+6. The user should review their device screen and confirm when prompted.
 
 If everything was successful and no errors appeared on your computer screen, a new app called "AI Power Grid" will appear in the main menu of your device.
 
@@ -56,6 +78,7 @@ If everything was successful and no errors appeared on your computer screen, a n
   - :information_source: It is assumed you have [Python](https://www.python.org/downloads/) installed on your computer.
   - :information_source: Go to the official Git download page: https://git-scm.com/downloads
   - :information_source: Ensure your PowerShell execution policy permits script execution: https://go.microsoft.com/fwlink/?LinkID=135170
+  - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
 > - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
@@ -76,14 +99,34 @@ cd app-bitcoin-clone-boilerplate
 ```bash
 docker run --rm -ti --privileged -v "$(Get-Location):/app" ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
-4. To compile the app, run the following command within the container:
+
+4.You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
+
+- Nano S
+```bash
+BOLOS_SDK=$NANOS_SDK
+```
+- NANO S+
+```bash
+BOLOS_SDK=$NANOSP_SDK
+```
+- NANO Flax
+```bash
+BOLOS_SDK=$FLAX_SDK
+```
+- NANO Stax
+```bash
+BOLOS_SDK=$STAX_SDK
+```
+
+5. To compile the app, run the following command within the container:
 
 ```bash
 make
 ```
    **If everything was successful and no errors appeared on your computer screen.**
 
-5. Run these commands on your host from the app's source folder once you have built the app for the device you want:
+6. Run these commands on your host from the app's source folder once you have built the app for the device you want:
 
 ```shell
 # Install Python virtualenv
@@ -103,7 +146,7 @@ python -m pip install ledgerblue
 python -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.elf
 ```
 
-6. The user should review their device screen and confirm when prompted.
+7. The user should review their device screen and confirm when prompted.
 
 A new app called "AI Power Grid" will appear in the main menu of your device.
 
@@ -114,6 +157,7 @@ A new app called "AI Power Grid" will appear in the main menu of your device.
   - :information_source: Docker: https://docs.docker.com/engine/install.
   - :information_source: It is assumed you have [Python](https://www.python.org/downloads/) installed on your computer.
   - :information_source: Go to the official Git download page: https://git-scm.com/downloads.
+  - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
 > - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
@@ -135,7 +179,26 @@ cd app-bitcoin-clone-boilerplate
 sudo docker run  --rm -ti --user root --privileged -v "$(pwd -P):/app" ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
 
-4. To compile the app, run the following command within the container:
+4.You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
+
+- Nano S
+```bash
+BOLOS_SDK=$NANOS_SDK
+```
+- NANO S+
+```bash
+BOLOS_SDK=$NANOSP_SDK
+```
+- NANO Flax
+```bash
+BOLOS_SDK=$FLAX_SDK
+```
+- NANO Stax
+```bash
+BOLOS_SDK=$STAX_SDK
+```
+
+5. To compile the app, run the following command within the container:
 
 ```bash
 make
@@ -143,7 +206,7 @@ make
 
   **If everything was successful and no errors appeared on your computer screen.**
 
-5. Run these commands on your host from the app's source folder once you have built the app for the device you want:
+6. Run these commands on your host from the app's source folder once you have built the app for the device you want:
 
 ```shell
 # Install Python virtualenv
@@ -163,7 +226,7 @@ python3 -m pip install ledgerblue
 python3 -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.elf
 ```
 
-6. The user should review their device screen and confirm when prompted.
+7. The user should review their device screen and confirm when prompted.
 
 A new app called "AI Power Grid" will appear in the main menu of your device.
 
