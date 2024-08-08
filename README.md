@@ -42,7 +42,7 @@ cd app-bitcoin-clone-boilerplate
 ```bash
 docker run --rm -ti  -v "$(realpath .):/app" --privileged -v "/dev/bus/usb:/dev/bus/usb" --user root ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
-4.You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
+4. You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
 
 - Nano S
 ```bash
@@ -67,7 +67,7 @@ make load
 ```
 6. The user should review their device screen and confirm when prompted.
 
-If everything was successful and no errors appeared on your computer screen, a new app called "AI Power Grid" will appear in the main menu of your device.
+   **If everything was successful and no errors appeared on your computer screen, a new app called "AI Power Grid" will appear in the main menu of your device.**
 
 ## Windows Installation Instructions
 **(with PowerShell)**
@@ -100,7 +100,7 @@ cd app-bitcoin-clone-boilerplate
 docker run --rm -ti --privileged -v "$(Get-Location):/app" ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
 
-4.You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
+4. You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
 
 - Nano S
 ```bash
@@ -148,7 +148,7 @@ python -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.e
 
 7. The user should review their device screen and confirm when prompted.
 
-A new app called "AI Power Grid" will appear in the main menu of your device.
+   **A new app called "AI Power Grid" will appear in the main menu of your device.**
 
 ## macOS Installation Instructions
 
@@ -179,7 +179,7 @@ cd app-bitcoin-clone-boilerplate
 sudo docker run  --rm -ti --user root --privileged -v "$(pwd -P):/app" ghcr.io/gonner22/ledger-app-builder-legacy:latest
 ```
 
-4.You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
+4. You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
 
 - Nano S
 ```bash
@@ -203,8 +203,7 @@ BOLOS_SDK=$STAX_SDK
 ```bash
 make
 ```
-
-  **If everything was successful and no errors appeared on your computer screen.**
+   **If everything was successful and no errors appeared on your computer screen.**
 
 6. Run these commands on your host from the app's source folder once you have built the app for the device you want:
 
@@ -228,7 +227,7 @@ python3 -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.
 
 7. The user should review their device screen and confirm when prompted.
 
-A new app called "AI Power Grid" will appear in the main menu of your device.
+   **A new app called "AI Power Grid" will appear in the main menu of your device.**
 
 ## This application adheres with Ledger latest application guidelines
 
