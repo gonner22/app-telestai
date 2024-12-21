@@ -28,9 +28,9 @@ APPVERSION_P = 3
 APPDEVELOPPER="Ledger"
 APPCOPYRIGHT="(c) 2024 Ledger"
 
-APPNAME ="AI Power Grid"
+APPNAME ="Telestai"
 
-VARIANT_VALUES = aipg
+VARIANT_VALUES = tls
 
 # Application source files
 # There is no additional sources for bitcoin
@@ -38,29 +38,29 @@ VARIANT_VALUES = aipg
 
 # simplify for tests
 ifndef COIN
-COIN=aipg
+COIN=tls
 endif
 
 # Enabling DEBUG flag will enable PRINTF and disable optimizations
 #DEBUG = 1
 
-ifeq ($(COIN),aipg)
+ifeq ($(COIN),tls)
 	
 # Refer to : https://github.com/dan-da/coinparams/blob/master/coinprefixes.md
-BIP44_COIN_TYPE=2886
-BIP44_COIN_TYPE_2=2886
-COIN_P2PKH_VERSION=23
-COIN_P2SH_VERSION=23
-COIN_NATIVE_SEGWIT_PREFIX=\"A\" 
+BIP44_COIN_TYPE=10117
+BIP44_COIN_TYPE_2=10117
+COIN_P2PKH_VERSION=111
+COIN_P2SH_VERSION=196
+COIN_NATIVE_SEGWIT_PREFIX=\"T\" 
 
 # Name of the coin that will be used in the app display
-COIN_COINID_NAME="AI Power Grid"
+COIN_COINID_NAME="Telestai"
 
 # Ticker that will be used in the transaction display
-COIN_COINID_SHORT=\"AIPG\" 
+COIN_COINID_SHORT=\"TLS\" 
 
 # Sign message magic header
-COIN_COINID=\"AIPG\"
+COIN_COINID=\"TLS\"
 
 # COIN_FAMILY can be set to FAMILY_BITCOIN, FAMILY_PEERCOIN, or FAMILY_STEALTH to handle 
 # parsing of the timestamp in the transaction (see lib-app-bitcoin/transaction.c)
