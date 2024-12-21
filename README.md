@@ -1,9 +1,9 @@
-# Ledger AI Power Grid Application
+# Ledger Telestai Application
 
-This application automates the process of creating a Ledger device app for our AI Power Grid cryptocurrency. It utilizes a Docker container to simplify this process, allowing users to:
+This application automates the process of creating a Ledger device app for our Telestai cryptocurrency. It utilizes a Docker container to simplify this process, allowing users to:
 
 - Easily compile their app for the desired Ledger device.
-- Install the AI Power Grid app directly onto their chosen device.
+- Install the Telestai  app directly onto their chosen device.
 
 Ledger devices such as Nano S, NanoS+, Ledger Stax or Ledger Flex are supported.
 
@@ -24,23 +24,25 @@ Ledger devices such as Nano S, NanoS+, Ledger Stax or Ledger Flex are supported.
   - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
-> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
+> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. 
+While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
 > - This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 
-1. Clone the repository app-bitcoin-clone-boilerplate.
+1. Clone the repository app-telestai.
 ```bash 
-git clone https://github.com/gonner22/app-bitcoin-clone-boilerplate --recurse-submodules
+git clone https://github.com/Telestai-Project/app-telestai --recurse-submodules
 ```
 2. Navigate into the cloned directory.
 ```bash
-cd app-bitcoin-clone-boilerplate
+cd app-telestai
 ```
-3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
+3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). 
+Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
 
    **Please note that all Ledger devices are compatible except for the Nano X, which is not currently supported due to technical limitations of Ledger.**
 
 ```bash
-docker run --rm -ti  -v "$(realpath .):/app" --privileged -v "/dev/bus/usb:/dev/bus/usb" --user root ghcr.io/gonner22/ledger-app-builder-legacy:latest
+docker run --rm -ti  -v "$(realpath .):/app" --privileged -v "/dev/bus/usb:/dev/bus/usb" --user root ghcr.io/telestai-project/ledger-app-builder-legacy:latest
 ```
 4. You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
 
@@ -52,9 +54,9 @@ BOLOS_SDK=$NANOS_SDK
 ```bash
 BOLOS_SDK=$NANOSP_SDK
 ```
-- NANO Flax
+- NANO Flex
 ```bash
-BOLOS_SDK=$FLAX_SDK
+BOLOS_SDK=$FLEX_SDK
 ```
 - NANO Stax
 ```bash
@@ -67,7 +69,7 @@ make load
 ```
 6. The user should review their device screen and confirm when prompted.
 
-   **If everything was successful and no errors appeared on your computer screen, a new app called "AI Power Grid" will appear in the main menu of your device.**
+   **If everything was successful and no errors appeared on your computer screen, a new app called "Telestai" will appear in the main menu of your device.**
 
 ## Windows Installation Instructions
 **(with PowerShell)**
@@ -81,23 +83,25 @@ make load
   - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
-> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
+> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. 
+While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
 > - This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 
-1. Clone the repository app-bitcoin-clone-boilerplate.
+1. Clone the repository app-telestai.
 ```bash 
-git clone https://github.com/gonner22/app-bitcoin-clone-boilerplate --recurse-submodules
+git clone https://github.com/Telestai-Project/app-telestai --recurse-submodules
 ```
 2. Navigate into the cloned directory.
 ```bash
-cd app-bitcoin-clone-boilerplate
+cd app-telestai
 ```
-3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
+3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). 
+Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
 
    **Please note that all Ledger devices are compatible except for the Nano X, which is not currently supported due to technical limitations of Ledger.**
 
 ```bash
-docker run --rm -ti --privileged -v "$(Get-Location):/app" ghcr.io/gonner22/ledger-app-builder-legacy:latest
+docker run --rm -ti --privileged -v "$(Get-Location):/app" ghcr.io/telestai-project/ledger-app-builder-legacy:latest
 ```
 
 4. You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
@@ -148,7 +152,7 @@ python -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.e
 
 7. The user should review their device screen and confirm when prompted.
 
-   **A new app called "AI Power Grid" will appear in the main menu of your device.**
+   **A new app called "Telestai" will appear in the main menu of your device.**
 
 ## macOS Installation Instructions
 
@@ -160,23 +164,25 @@ python -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.e
   - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
-> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
+> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. 
+While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
 > - This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 
-1. Clone the repository app-bitcoin-clone-boilerplate.
+1. Clone the repository app-telestai.
 ```bash 
-git clone https://github.com/gonner22/app-bitcoin-clone-boilerplate --recurse-submodules
+git clone https://github.com/Telestai-Project/app-telestai --recurse-submodules
 ```
 2. Navigate into the cloned directory.
 ```bash
-cd app-bitcoin-clone-boilerplate
+cd app-telestai
 ```
-3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
+3. To begin developing, first connect your Ledger device to your PC and unlock it. Ensure it's displayed on the dashboard (not within another app). 
+Then, execute the following command to download the necessary image and enter the container. The container will be located at the "/app" path.
 
    **Please note that all Ledger devices are compatible except for the Nano X, which is not currently supported due to technical limitations of Ledger.**
 
 ```bash
-sudo docker run  --rm -ti --user root --privileged -v "$(pwd -P):/app" ghcr.io/gonner22/ledger-app-builder-legacy:latest
+sudo docker run  --rm -ti --user root --privileged -v "$(pwd -P):/app" ghcr.io/telestai-project/ledger-app-builder-legacy:latest
 ```
 
 4. You can choose which device to compile for by setting the BOLOS_SDK environment variable to the following values:
@@ -227,10 +233,9 @@ python3 -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.
 
 7. The user should review their device screen and confirm when prompted.
 
-   **A new app called "AI Power Grid" will appear in the main menu of your device.**
+   **A new app called "Telestai" will appear in the main menu of your device.**
 
 ## This application adheres with Ledger latest application guidelines
 
 ## Are you testing a Ledger device application?
-- [Go on Discord](https://discord.gg/W9D8j6HCtC) to chat with developer support and the developer community.
-
+- [Go on Discord](https://discord.com/invite/VmFXfHnZE5) to chat with developer support and the developer community.
