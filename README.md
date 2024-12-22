@@ -24,7 +24,7 @@ Ledger devices such as Nano S, NanoS+, Ledger Stax or Ledger Flex are supported.
   - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
-> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. 
+> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. TLS is not responsible for any failures or issues that may arise. 
 While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
 > - This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 
@@ -83,7 +83,7 @@ make load
   - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
-> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. 
+> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. TLS is not responsible for any failures or issues that may arise. 
 While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
 > - This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 
@@ -164,7 +164,7 @@ python -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.e
   - :information_source: Having trouble connecting your USB device? Check out this link for help: https://support.ledger.com/article/115005165269-zd?redirect=false
 
 > **Warning**
-> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. AIPG is not responsible for any failures or issues that may arise. 
+> - To ensure data protection, users must back up their Ledger device recovery seeds before using this application. TLS is not responsible for any failures or issues that may arise. 
 While the app has been tested on some devices, we rely on community feedback to validate its functionality on others, including the Ledger Flex and Stax.
 > - This repository contains a submodule, and should therefore be cloned with the appropriate command: 
 
