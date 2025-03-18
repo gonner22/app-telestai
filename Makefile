@@ -49,9 +49,8 @@ ifeq ($(COIN),tls)
 # Refer to : https://github.com/dan-da/coinparams/blob/master/coinprefixes.md
 BIP44_COIN_TYPE=10117
 BIP44_COIN_TYPE_2=10117
-COIN_P2PKH_VERSION=111
-COIN_P2SH_VERSION=196
-COIN_NATIVE_SEGWIT_PREFIX=\"T\" 
+COIN_P2PKH_VERSION=66
+COIN_P2SH_VERSION=127
 
 # Name of the coin that will be used in the app display
 COIN_COINID_NAME="Telestai"
@@ -69,7 +68,7 @@ COIN_FAMILY=FAMILY_BITCOIN
 # COIN_FLAGS can be set to FLAG_PEERCOIN_UNITS, FLAG_PEERCOIN_SUPPORT, or
 # FLAG_SEGWIT_CHANGE_SUPPORT, (see lib-app-bitcoin/transaction.c and
 # lib-app-bitcoin/hash_input_finalize_full.c)
-COIN_FLAGS=FLAG_SEGWIT_CHANGE_SUPPORT
+COIN_FLAGS=
 
 # COIN_FORKID can be set if needed
 COIN_FORKID=0
